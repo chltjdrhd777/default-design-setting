@@ -1,4 +1,4 @@
-import styled from "@emotion/styled/macro";
+import styled from "styled-components/macro";
 
 //commonly used component
 export const B = {
@@ -11,4 +11,5 @@ export const B = {
     max-width: 100%;
     padding: 0 3rem;
   `,
+  Section: styled.section``,
 };

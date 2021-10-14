@@ -1,5 +1,4 @@
-import styled from "@emotion/styled/macro";
-
+import { css } from "styled-components/macro";
 //@ CSS PART START ///////////////////////////////////////////////////////////////
 export const calcRem = (px: number) => `${px / 16}rem` as const;
 
@@ -79,8 +78,15 @@ export const mediaQuery = {
   tablet: renderMediaQuery("screen", deviceSizeUnits.tablet),
   phone: renderMediaQuery("screen", deviceSizeUnits.mobileL),
 } as const;
-
 //@ CSS PART END ///////////////////////////////////////////////////////////////
+
+// $LAYOUT PART START /////////////////////////////////////////////////////////
+export const flexMiddle = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+// $LAYOUT PART END /////////////////////////////////////////////////////////
 
 //# TYPE PART START ////////////////////////////////////////////////////////
 export const theme = {

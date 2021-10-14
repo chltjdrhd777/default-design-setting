@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "styled-components/macro";
 import { theme } from "globalCSS/theme";
-import GlobalCSS from "globalCSS/global";
+import GlobalStyle from "globalCSS/global";
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <GlobalCSS />
+      <GlobalStyle />
       <App />
     </ThemeProvider>
   </React.StrictMode>,
