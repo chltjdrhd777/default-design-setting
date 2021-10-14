@@ -1,10 +1,10 @@
 import React from "react";
-import { Global, css } from "@emotion/react";
 import WitneyLight from "assets/fonts/whitneylight.woff";
 import WitneyMedium from "assets/fonts/whitneymedium.woff";
 import WitneyBold from "assets/fonts/whitneybold.woff";
+import { createGlobalStyle } from "styled-components";
 
-const globalCSS = css`
+const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "Whitney Light";
     src: local("Whitney Light"), url(${WitneyLight}) format("woff");
@@ -56,21 +56,12 @@ const globalCSS = css`
 
   a {
     text-decoration: none;
-    display: inline-block;
     color: var(---dark-clr);
   }
 
   ul {
     list-style-type: none;
   }
-
-  .container {
-    padding: 0 3rem;
-  }
 `;
-
-function GlobalStyle() {
-  return <Global styles={globalCSS} />;
-}
 
 export default GlobalStyle;
